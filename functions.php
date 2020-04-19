@@ -789,7 +789,7 @@ function tabor_header_style() {
  * @param string $title The archive title.
  */
 function tabor_remove_archive_title_prefix( $title ) {
-	return preg_replace( '/^\w+: /', '', $title );
+	return preg_replace( '/^\w+: /u', '', $title );
 }
 add_filter( 'get_the_archive_title', 'tabor_remove_archive_title_prefix' );
 
